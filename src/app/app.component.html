@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="header">
+    <div class="header__title">_RealTimeWeb</div>
+  </div>
+
+  <div class="form">
+      <div class="form__label">Enter your short message:</div>
+      <div><input type="text" class="form__textbox" [(ngModel)]="input" maxlength="100" /> <button class="form__button" (click)="submit()">Ok</button></div>
+
+      <div class="form__messages">
+        <div class="message" *ngFor="let message of messages">
+          {{ message }}
+        </div>
+      </div>
+  </div>
+
+  <div class="footer">Web App powered by <a href="https://socket.io/" target="_blank">Socket.io</a></div>
+</div>

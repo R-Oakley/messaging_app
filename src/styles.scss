@@ -1,0 +1,73 @@
+@import "./_globals";
+
+html {
+	height:100%;
+	overflow-y: scroll;
+}
+
+body {
+    height:100%;
+    padding:20px;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: $text-color;
+    background-color: $background-color;
+}
+
+.form {    
+    &__label {
+        margin-top:10px;
+        margin-bottom:3px;
+    } 
+
+    &__textbox {
+        border-color: lighten($greyed-color,15);
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: 0 1px 2px lighten($greyed-color,15) inset;
+        color: #000000;
+        background-color: lighten($greyed-color,15);
+        padding: 6px 12px;
+        min-width:300px;
+        font-size:14px;
+        &:focus {outline:0;}
+    }
+
+    &__messages {
+        margin-top:20px;
+        padding-top:20px;
+        border-top-style: dotted;
+        border-top-width: 4px;
+        border-top-color: $greyed-color;
+    }
+
+    &__button {
+        background-color: $accent-color;
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        text-align: center;
+        font-size: 14px;
+        text-decoration:none;
+        margin-right:3px;
+        margin-left:5px;
+        border-radius: 4px;
+        // gets rid of annoying blue outline when button clicked
+        &:focus {outline:0;}
+        &:hover {
+            background-color: darken($accent-color,20);
+        }
+        &--accented {
+            background-color: $accent-color;
+        }
+        &--accented:hover {
+            background-color: darken($greyed-color,20);
+        }
+        &:disabled,&[disabled]{
+            background-color: #cccccc;
+            color: #666666;
+        }
+    } 
+}
